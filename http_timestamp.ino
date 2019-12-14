@@ -1,7 +1,7 @@
 /*
   Connect ESP32 to AskSensors
- * Description:  This sketch connects to a website (https://asksensors.com) using an ESP32 Wifi module.
- *  Author: https://asksensors.com, 2018
+ * Description:  This sketch publishing data with timestamp to IOT cloud (https://asksensors.com) using an ESP32 Wifi module.
+ *  Author: https://asksensors.com, 2019
  *  github: https://github.com/asksensors
  */
  
@@ -61,7 +61,7 @@ void loop(){
     Serial.println("connection failed");
     return;
   }else {
-  Serial.println("********** Send data with timestam to ASKSENSORS over HTTPS p");
+  Serial.println("********** Send data with timestamp to ASKSENSORS over HTTP");
   // timestamp
   while(!timeClient.update()) {
   timeClient.forceUpdate();
